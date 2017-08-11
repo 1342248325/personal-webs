@@ -1,309 +1,501 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="css/animate.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="css/jquery.fullPage.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/jquery.fullPage.css">
-    <script src="js/jquery-1.8.3.min.js"></script>
-    <script src="js/jquery.fullPage.min.js"></script>
-    <script src="js/jquery.fullPage.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/index.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css"/>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="web前端个人简历,前端个人博客">
+    <meta name="description" content="个人简历，职业定位为web前端工程师">
+    <meta name="author" content="高婧">
+    <title>Web前端工程师简历</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/base.css" type="text/css">
+    <link rel="stylesheet" href="css/cv.css">
+    <script src='js/echarts.common.min.js'></script>
+    <script src='js/echarts.min.js'></script>
+    <!--[if lte IE 9]>
+    <script type="text/javascript">
+        window.location = "http://www.xiaohuokj.cn"
+    </script>
+    <![endif]-->
+    <!-- xiaohuokj.cn Baidu tongji analytics -->
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?e5ed8cee288bc8886ff2a69a606f64e4";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <style>
+        .ly{
+            position: relative;
+            height: 558px;
+        }
+        .box{
+            width: 50%;
+            height: 500px;
+            position: absolute;
+            left:0;
+            top:-40px;
+            right:0;
+            bottom:0;
+            margin:auto;
+        }
+        .my{
+            background:#2c343c;
+            background-clip:content-box;
+            width: 400px;
+            height: 500px;
+            position: absolute;
+            left: -400px;
+            top: -15px;
+        }
+
+        .my>div{
+            width:200px;
+            height:200px;
+            border-radius:50%;
+            background-image:url(image/touxiang.jpg);
+            margin:0 auto;
+            margin-top:100px;
+            transition: all 1s;
+        }
+        .my>div:hover{
+            transform:rotate(360deg);
+        }
+        .my>h1{
+            width:100%;
+            margin:0 auto;
+            text-align:center;
+            margin-top:50px;
+            margin-bottom:30px;
+            font-size:20px;
+            color: #fff;
+        }
+        .my>h2{
+            width:100%;
+            margin:0 auto;
+            text-align:center;
+            font-size:20px;
+            margin-bottom:124px;
+            color: #fff;
+        }
+        .skills{
+            width:100%;
+            height:auto;
+            padding:50px 0;
+            text-align:center;
+            box-sizing:border-box;
+        }
+        .box>div>canvas{
+            width: 200px;
+            height:auto;
+            position:absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            margin:auto;
+        }
+        p a{
+            display: block;
+            font-size: 12px;
+            color:#fff;
+        }
+    </style>
 </head>
 <body>
-
-<div id="fullpage">
-    <div class="section">
-        <!--菜单按钮-->
-        <!--QQ-电话-->
-        <div class="sq_concat">
-            <div class="sq_concat_back">
-                <div class="sq_phone"><img src="images/index/phone.png" alt="联系电话"></div>
-                <div class="sq_qq"><img src="images/index/qq.png" alt="联系QQ"></div>
-                <div class="sq_weixin"><img src="images/index/weixin.png" alt="微信"></div>
+<div class="content ">
+    <div class="cv-container">
+        <div id="section1" class="section active">
+            <div id="top" title="顶部">
+                <img src="image/top.png" alt="回到顶部">
             </div>
-        </div>
+            <div id="perfect">
 
-        <div class="sq_center sq_position"><img src="images/index/er.png"></div>
-        <div class="sq_center_1 sq_position"><img src="images/index/zuiwai.png"></div>
-        <div class="sq_center_2"><img src="images/index/nei.png"></div>
-
-        <!--从这里开始-->
-        <div class="sq_start">从这里开始</div>
-        <div class="sq_mouse">
-            <img src="images/index/shubiao.png">
-            <div class="sq_m_small"></div>
-        </div>
-        <div class="bg">
-            <img src="images/index/FirstScreen.jpg" alt="第一屏">
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="sq_tow_screen">
-            <p class="title">关于我</p>
-            <div class="imgbox"></div>
-            <p class="con">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我叫高婧，22岁，坐标山西，是一名前端工程师。前端是一门有容乃大的行业，我是计算机专业出生。 在学前端之前，接触过的就是大学里的C语言。庆幸的是JS与C很相像，给我很大的信心来学习。今后的职业规划也是朝着前端发展。</p>
-        </div>
-        <div class="sq_zw"><img src="images/index/zhewen.png"></div>
-        <div class="bg">
-            <img src="images/index/FirstScreen2.jpg" alt="第二屏">
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="sq_tow_screen"></div>
-        <div class="mask1">
-            <p> javascript</p>
-            <p> react</p>
-            <p> vue</p>
-            <p> php/mysql</p>
-            <canvas width="300" height="300" class="can1"></canvas>
-            <canvas width="300" height="300" class="can2"></canvas>
-            <canvas width="300" height="300" class="can3"></canvas>
-            <canvas width="300" height="300" class="can4"></canvas>
-        </div>
-        <div class="sq_zw"><img src="images/index/zhewen.png"></div>
-        <div class="bg">
-            <img src="images/index/FirstScreen2.jpg" alt="第二屏">
-        </div>
-    </div>
-
-
-    <div class="section">
-        <div class="sq_three">
-            APP
-            <div class="sq_three_s1">
-                <span class="sq_three_s1_span"></span>
-                <span class="sq_three_s1_span1"></span>
             </div>
-        </div>
-
-        <div class="sq_three_s2" style="z-index: 6;margin-left:-450px;">
-            <ul>
-                <li>
-                    <div class="sq_three_img">
-                        <div class="sq_three_re" style="position: relative;display: block">
-                            <img src="images/index/an1.jpg" alt="创家居">
-                            <div class="sq_z_back"></div>
-                            <span class="sq_z_left"><img src="images/index/zoom_1.png"></span>
-                            <span class="sq_z_right"><img src="images/index/zoom_2.png"></span>
-                        </div>
-                        <a href='https://createhome.duapp.com' class="sq_three_top">
-                            <span>Create A Home</span>
-                            <span style="font-size: 18px;">创家居</span>
-                        </a>
-                        <div class="sq_three_top" style="color:#787878">2015.05.18</div>
-                        <div class="sq_three_top sq_solid"
-                             style="width:270px;background: #959595;height: 2px;"></div>
-                    </div>
-                </li>
-                <li>
-                    <div class="sq_three_img">
-                        <div class="sq_three_re" style="position: relative;">
-                            <img src="images/index/an2.jpg" alt="博雅书城">
-                            <div class="sq_z_back"></div>
-                            <span class="sq_z_left"><img src="images/index/zoom_1.png"></span>
-                            <span class="sq_z_right"><img src="images/index/zoom_2.png"></span>
-                        </div>
-
-                        <a href='http://boyastore.duapp.com' class="sq_three_top">
-                            <span>Boya Bookstore</span>
-                            <span style="font-size: 18px;">博雅书城</span>
-                        </a>
-                        <div class="sq_three_top" style="color:#787878">2015.05.18</div>
-                        <div class="sq_three_top sq_solid" style="width:270px;background: #959595;height: 2px;"></div>
-                    </div>
-                </li>
-
-                <li>
-                    <div class="sq_three_img">
-                        <div class="sq_three_re" style="position: relative;">
-                            <img src="images/index/an3.jpg" alt="有新闻">
-                            <div class="sq_z_back"></div>
-                            <span class="sq_z_left"><img src="images/index/zoom_1.png"></span>
-                            <span class="sq_z_right"><img src="images/index/zoom_2.png"></span>
-                        </div>
-
-                        <a href="http://visualfieldnews.duapp.com/" class="sq_three_top">
-                            <span>News</span>
-                            <span style="font-size: 18px;">有新闻</span>
-                        </a>
-                        <div class="sq_three_top" style="color:#787878">2015.05.18</div>
-                        <div class="sq_three_top sq_solid" style="width:270px;background: #959595;height: 2px;"></div>
-                    </div>
-                </li>
-
+            <div class="myIntro">
+                <h1 class="fade">Welcome to my personal homePage</h1>
+                <h3 class="fade">一个专注时间和效率的前端工程师</h3>
+                <span class="active fade" id="abMe">关于我</span>
+                <span id="mypro" class="fade">我的作品</span>
+            </div>
+            <ul class="bg-img">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
             </ul>
         </div>
-        <div class="sq_three_s3">
-            <div class="sq_three_all">ALL</div>
-        </div>
-        <div class="bg">
-            <img src="images/index/FirstScreen3.jpg" alt="第三屏">
-        </div>
-    </div>
 
+        <div id="section2" class="section">
+            <!-- 导航条-->
+            <div id="nav-bar" class="bar">
+                <div class="container">
+                    <a href=" https://9isun.github.io/"> <div class="fl">博客</div></a>
+                    <ul class="fr nav-ul">
+                        <li>关于我</li>
+                        <li>求职意向</li>
+                        <li>作品集</li>
+                        <li>技术掌握</li>
+                        <li>我的经历</li>
+                        <li>联系我</li>
+                    </ul>
+                    <div class="fr more-nav">
+                        <img src="image/more.png" alt="更多">
+                    </div>
+                </div>
+                <ul class="nav-ul nav-xs-ul">
+                    <li>关于我</li>
+                    <li>求职意向</li>
+                    <li>作品集</li>
+                    <li>技术掌握</li>
+                    <li>我的经历</li>
+                    <li>联系我</li>
+                </ul>
+            </div>
 
-    <div class="section">
-        <!--<div class="bg" style="z-index:3"><img src="images/index/2zhehzoa.jpg.png"></div>-->
-        <div class="sq_three">
-            PC
-            <div class="sq_three_s1">
-                <span class="sq_three_s1_span"></span>
-                <span class="sq_three_s1_span1"></span>
+            <!--关于我-->
+            <h2>关于我</h2>
+            <hr>
+            <div class="center fades">
+                <p class="center"><img id="touxiang" src="image/touxiang.jpg" alt="头像" style="width:100px;height:100px;"/></p>
+                <div class="my-intro">
+                    <p>我叫高婧，22岁，坐标山西，是一名前端工程师。前端是一门有容乃大的行业，我是计算机专业出生。 在学前端之前，
+                        接触过的就是大学里的C语言。庆幸的是JS与C很相像，给我很大的信心来学习。今后的职业规划也是朝着前端发展</p>
+                    <p>做过响应式页面，移动端页面，pc端页面。</p>
+                </div>
             </div>
         </div>
-
-        <div class="sq_three_s2" style="z-index: 6;margin-left:-450px;">
-            <ul>
-                <li>
-                    <div class="sq_three_img">
-                        <div class="sq_three_re" style="position: relative;">
-                            <img src="images/index/an1.jpg" alt="博客">
-                            <div class="sq_z_back"></div>
-                            <span class="sq_z_left"><img src="images/index/zoom_1.png"></span>
-                            <span class="sq_z_right"><img src="images/index/zoom_2.png"></span>
-                        </div>
-                        <a href="https://1342248325.github.io/MyBlog/" class="sq_three_top">
-                            <span>Blog</span>
-                            <span style="font-size: 18px;">博客</span>
-                        </a>
-                        <div class="sq_three_top" style="color:#787878">2015.05.18</div>
-                        <div class="sq_three_top sq_solid" style="width:270px;background: #959595;height: 2px;"></div>
-                    </div>
-                </li>
-                <li>
-                    <div class="sq_three_img">
-                        <div class="sq_three_re" style="position: relative;">
-                            <img src="images/index/an2.jpg" alt="聊一聊">
-                            <div class="sq_z_back"></div>
-                            <span class="sq_z_left"><img src="images/index/zoom_1.png"></span>
-                            <span class="sq_z_right"><img src="images/index/zoom_2.png"></span>
-                        </div>
-
-                        <a href="http://signalcommunt.duapp.com/keep" class="sq_three_top">
-                            <span>Have A Chat</span>
-                            <span style="font-size: 18px;">实时通信</span>
-                        </a>
-                        <div class="sq_three_top" style="color:#787878">2015.05.18</div>
-                        <div class="sq_three_top sq_solid" style="width:270px;background: #959595;height: 2px;"></div>
-                    </div>
-                </li>
-
-                <li>
-                    <div class="sq_three_img">
-                        <div class="sq_three_re" style="position: relative;">
-                            <img src="images/index/an4.jpg" alt="倾听">
-                            <div class="sq_z_back"></div>
-                            <span class="sq_z_left"><img src="images/index/zoom_1.png"></span>
-                            <span class="sq_z_right"><img src="images/index/zoom_2.png"></span>
-                        </div>
-
-                        <a class="sq_three_top" href="http://jingktv.duapp.com">
-                            <span>Listen for</span>
-                            <span style="font-size: 18px;">音乐APP</span>
-                        </a>
-                        <div class="sq_three_top" style="color:#787878">2015.05.18</div>
-                        <div class="sq_three_top sq_solid" style="width:270px;background: #959595;height: 2px;"></div>
-                    </div>
-                </li>
-
-
-            </ul>
+        <div id="section3" class="section">
+            <h2>求职意向</h2>
+            <hr>
+            <div class="container center fades">
+                <div class="col-md-3 col-xs-6 skill-ps skill">
+                    <p><img src="image/web.png" alt="切图"></p>
+                    <p class="ptitle">HTML5&CSS3页面</p>
+                    <p>运用H5&C3实现页面布局</p>
+                    <p>熟练使用H5&C3新标签</p>
+                </div>
+                <div class="col-md-3 col-xs-6 skill-web skill">
+                    <p><img src="image/css.png" alt="css"></p>
+                    <p class="ptitle">JS&JQuery</p>
+                    <p>>用JS完成常见的前端功能特效</p>
+                    <p>用原生JQuery实现页面功能，以及做一些简单游戏。</p>
+                </div>
+                <div class="col-md-3 col-xs-6 skill-js skill">
+                    <p><img src="image/js.png" alt="js"></p>
+                    <p class="ptitle">PHP&AJAX</p>
+                    <p>用PHP语言结合MySQL进行与后台的数据交互</p>
+                    <p>用AJAX读取后台数据。</p>
+                </div>
+                <div class="col-md-3 col-xs-6 skill-h5 skill">
+                    <p><img src="image/h5.png" alt="h5"></p>
+                    <p class="ptitle">React&Nodejs&Vue</p>
+                    <p>运用React组件进行页面布局，实现前后端分离。</p>
+                    <p>Nodejs结合React进行布局，实现抓取数据。</p>
+                    <p>Vue结合Nodejs实现页面布局及其功能实现。</p>
+                </div>
+            </div>
         </div>
-        <div class="sq_three_s3">
-            <div class="sq_three_all">ALL</div>
+        <div id="section4" class="section">
+            <h2>作品集</h2>
+            <hr>
+            <div class="container center fades">
+                <p class="center intros">写jq前端功能的时候，我的宗旨是能手写就手写，不依赖插件。手写代码更简洁高效，也更能提升自己技术。</p>
+
+                <div class="col-md-4 col-xs-6">
+                    <div class="imgbox">
+                        <img src="image/06.jpg" alt="作品配图">
+                    </div>
+                    <a href="http://signalcommunt.duapp.com/keep" target="_blank">
+                        <div class="zp-cover" style="top: 45%">
+                            <h4>我的备忘录</h4>
+                            <p>vue进行页面重构,nodejs搭建服务器,socket.io搭建聊天服务器</p>
+                            <img src="image/search.png" alt="查看">
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 col-xs-6 ">
+                    <div class="imgbox">
+                        <img src="image/02.jpg" alt="作品配图">
+                    </div>
+                    <a href="https://1342248325.github.io/MyBlog/" target="_blank">
+                        <div class="zp-cover">
+                            <h4>博客</h4>
+                            <p>hexo框架进行页面重构</p>
+                            <img src="image/search.png" alt="查看">
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 col-xs-6 ">
+                    <div class="imgbox">
+                        <img src="image/03.jpg" alt="作品配图">
+                    </div>
+                    <a href="http://visualfieldnews.duapp.com/" target="_blank">
+                        <div class="zp-cover">
+                            <h4>新闻类页面</h4>
+                            <p>记录实时新闻，结合Nodejs实现抓取数据</p>
+                            <img src="image/search.png" alt="查看">
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 col-xs-6 ">
+                    <div class="imgbox">
+                        <img src="image/04.jpg" alt="作品配图">
+                    </div>
+                    <a href="https://createhome.duapp.com" target="_blank">
+                        <div class="zp-cover">
+                            <h4>创家居</h4>
+                            <p>php搭建框架,js实现动效,ajax获取数据</p>
+                            <img src="image/search.png" alt="查看">
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-4 col-xs-6 ">
+                    <div class="imgbox">
+                        <img src="image/07.jpg" alt="作品配图">
+                    </div>
+                    <a href="javascript:void(0)" target="_blank">
+                        <div class="zp-cover">
+                            <p><a href="http://boyastore.duapp.com">博雅书店</a></p>
+                            <img src="image/search.png" alt="查看">
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 col-xs-6">
+                    <div class="imgbox">
+                        <img src="image/08.jpg" alt="作品配图">
+                    </div>
+                    <a href="http://jingktv.duapp.com" target="_blank">
+                        <div class="zp-cover">
+                            <h4>倾听</h4>
+                            <p>音乐app</p>
+                            <img src="image/search.png" alt="查看">
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="bg">
-            <img src="images/index/FirstScreen3.jpg" alt="第三屏">
+        <div id="section5" class="section">
+            <h2>技术掌握</h2>
+            <hr>
+            <div class="container center fades">
+                <p class="ptitle">H5&C3</p>
+                <p class="ptitle">JS&JQuery</p>
+                <p class="ptitle">PHP&MySQL</p>
+                <p class="ptitle">AJAX</p>
+                <p class="ptitle">React&Nodejs</p>
+                <p class="ptitle">Vue</p>
+            </div>
+            <!--<div class="container center fades">-->
+                <!--<div class="col-md-3 col-xs-6">-->
+                    <!--<div class="wrap-box">-->
+                        <!--<div class="circle-wrap clip-auto">-->
+                            <!--<div class="left-clip percent"></div>-->
+                            <!--<div class="right-clip percent"></div>-->
+                        <!--</div>-->
+                        <!--<div class="circle-num">-->
+                            <!--<span>90</span>%-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<p class="ptitle">H5&C3</p>-->
+                <!--</div>-->
+                <!--<div class="col-md-3 col-xs-6">-->
+                    <!--<div class="wrap-box">-->
+                        <!--<div class="circle-wrap clip-auto">-->
+                            <!--<div class="left-clip percent"></div>-->
+                            <!--<div class="right-clip percent"></div>-->
+                        <!--</div>-->
+                        <!--<div class="circle-num">-->
+                            <!--<span>90</span>%-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<p class="ptitle">JS</p>-->
+                <!--</div>-->
+                <!--<div class="col-md-3 col-xs-6">-->
+                    <!--<div class="wrap-box">-->
+                        <!--<div class="circle-wrap clip-auto">-->
+                            <!--<div class="left-clip percent"></div>-->
+                            <!--<div class="right-clip percent"></div>-->
+                        <!--</div>-->
+                        <!--<div class="circle-num">-->
+                            <!--<span>85</span>%-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<p class="ptitle">PHP&AJAX</p>-->
+                <!--</div>-->
+                <!--<div class="col-md-3 col-xs-6">-->
+                    <!--<div class="wrap-box">-->
+                        <!--<div class="circle-wrap clip-auto">-->
+                            <!--<div class="left-clip percent"></div>-->
+                            <!--<div class="right-clip percent"></div>-->
+                        <!--</div>-->
+                        <!--<div class="circle-num">-->
+                            <!--<span>80</span>%-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<p class="ptitle">React&Nodejs&Vue</p>-->
+                <!--</div>-->
+            <!--</div>-->
+                <!--<div class="skills">-->
+                    <!--<h1>About My Skills</h1>-->
+                <!--</div>-->
+                <!--<div class="ly ">-->
+                    <!--&lt;!&ndash;<div class="my">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<div></div>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<h1>GongTiantian</h1>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<h2>Web Designer</h2>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--<div class="box col-md-3 col-xs-6"></div>-->
+                <!--</div>-->
+        </div>
+        <div id="section6" class="section">
+            <h2>我的经历</h2>
+            <hr>
+            <div class="container center fades">
+                <ul class="my-xp">
+                    <li>
+                        <div class="date-box">
+                            <p>07/2015</p>
+                            <p>-</p>
+                            <p>08/2017</p>
+                        </div>
+                        <div class="my-work my-xp-box">
+                            <strong>山西派唯网络科技有限公司</strong>
+                            <p class="ptitle">技术部/前端工程师</p>
+                            <p> 1.前期与UI沟通，根据实际可操作性和功能需求修改设计稿</p>
+                            <p> 2.主要负责项目前端布局，熟练运用H5,C3以及JS,JQuery等语言实现前端页面的效果</p>
+                            <p> 3.运用PHP，Ajax,React，MySQL等语言实现数据连接，也运用多种现有插件例如Swiper与Bootstrap,Ant完成各种效果实现，开发中也不断的与产品经理后台进行沟通改进，优化项目性能</p>
+
+
+                            <!--<p>利用JS、CSS3书写前端功能，让页面更充实丰富</p>-->
+                            <!--<p>并运用PHP与AJAX进行数据交互。</p>-->
+                        </div>
+                    </li>
+                    <li>
+                        <div class="date-box">
+                            <p>09/2014</p>
+                            <p>-</p>
+                            <p>06/2017</p>
+                        </div>
+                        <div class="my-school my-xp-box">
+                            <strong>山西建筑职业技术学院</strong>
+                            <p class="ptitle">计算机应用技术</p>
+                            <p class="ptitle">大学专科</p>
+                            <p></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="section7" class="section">
+            <h2>联系我</h2>
+            <hr>
+            <div class="container center fades">
+                <div class="flow">
+                    <div id="uyan_frame" class="fl half"></div>
+                </div>
+            </div>
         </div>
     </div>
+    <p class="center beian"><a href="http://www.miitbeian.gov.cn" target="_blank">晋ICP备16011670号-2 Copyright © 2016 - 2017</a></p>
 
-
-    <div class="section">
-        <div class="bg" style="z-index:3"><img src="images/index/2zhehzoa.jpg"></div>
-        <div class="sq_four">
-            <img src="images/index/ready.png">
-        </div>
-        <div class="sq_four_all">We are ready,you?</div>
-        <div class="sq_four2"><img src="images/index/go.png"></div>
-        <div class="bg">
-            <img src="images/index/FirstScreen4.jpg" alt="第四屏">
-        </div>
-    </div>
 </div>
-
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/jquery-ui.min.js"></script>
-<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
-<script type="text/javascript" src="js/style.js"></script>
-<script type="text/javascript">
-    $(function () {
-        $('#fullpage').fullpage({
-            'verticalCentered': false,
-            anchors: ['page1', 'page2', 'page3', 'page4'],
-            'navigation': true,                //是否显示导航栏
-            'navigationPosition': 'left',//导航栏的位置
-            afterLoad:function(anchorLink, index){
-                if(index==0){
-                    let sq=$(".sq_center_2");
-                    sq.css("marginTop","0");
-                }
-                if(index == 3){
-                    cav();
-                }
-                if(index==3){
-                    let box=$(".box");
-                    box.eq(0).animate({left:180})
-                    box.eq(1).animate({left:610})
-                }if(index==4){
-                    let imgbox=$(".imgbox");
-                    $(imgbox).css({opacity:1});
-                }
-            }
-        });
-
-
-
-        var back = $(".sq_concat_back").find("div");
-        var img = ["images/index/phone_1.png", "images/index/qq_1.png", "images/index/weixin_1.png"];
-        var imgs = ["images/index/phone.png", "images/index/qq.png", "images/index/weixin.png"];
-
-        back.hover(function () {
-            $(this).children("img").attr("src", img[back.index(this)]);
-        }, function () {
-            $(this).children("img").attr("src", imgs[back.index(this)]);
-        });
-
-        var sq_img = $(".sq_three_s2 ul").find("li");
-        sq_img.hover(function () {
-            $(this).children("div").children(".sq_three_re").children(".sq_z_back").css({"opacity": "0.7"});
-            $(this).children("div").children(".sq_solid").css("background", "#3CAF5A");
-            $(this).children("div").children(".sq_three_re").children(".sq_z_left").animate({
-                "opacity": "1",
-                "left": "38%"
-            }, 500);
-            $(this).children("div").children(".sq_three_re").children(".sq_z_right").animate({
-                "opacity": "1",
-                "right": "45%"
-            }, 500);
-        }, function () {
-            $(this).children("div").children(".sq_three_re").children(".sq_z_back").css("opacity", "0");
-            $(this).children("div").children(".sq_solid").css("background", "#959595");
-            $(this).children("div").children(".sq_three_re").children(".sq_z_left").animate({
-                "opacity": "0",
-                "left": "0"
-            }, 500);
-            $(this).children("div").children(".sq_three_re").children(".sq_z_right").animate({
-                "opacity": "0",
-                "right": "0"
-            }, 500);
-        });
-    });
-</script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/mycv.js"></script>
 
 </body>
 </html>
+<script src="js/echarts.common.min.js"></script>
+<script>
+
+
+
+    // 技能掌握
+    var box=document.querySelector(".box");
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(box);
+
+    // 指定图表的配置项和数据
+    var option = {
+        backgroundColor: '#2c343c',
+
+        title: {
+            text: 'My Skill Info',
+            left: 'center',
+            top: 30,
+            textStyle: {
+                color: '#fff'
+            }
+        },
+
+        tooltip : {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+
+        visualMap: {
+            show: false,
+            min: 80,
+            max: 600,
+            inRange: {
+                colorLightness: [0, 1]
+            }
+        },
+        series : [
+            {
+                name:'掌握情况',
+                type:'pie',
+                radius : '55%',
+                center: ['50%', '50%'],
+                data:[
+                    {value:335, name:'CSS'},
+                    {value:310, name:'HTML'},
+                    {value:274, name:'Jquery'},
+                    {value:235, name:'PS'},
+                    {value:400, name:'JavaScript'}
+                ].sort(function (a, b) { return a.value - b.value; }),
+                roseType: 'radius',
+                label: {
+                    normal: {
+                        textStyle: {
+                            color: 'rgba(255, 255, 255, 1)'
+                        }
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        lineStyle: {
+                            color: 'rgba(255, 255, 255, 0.7)'
+                        },
+                        smooth: 0.2,
+                        length: 10,
+                        length2: 20
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        color: '#c23531',
+                        shadowBlur: 200,
+                        shadowColor: 'rgba(255, 255, 255, 0.4)'
+                    }
+                },
+
+                animationType: 'scale',
+                animationEasing: 'elasticOut',
+                animationDelay: function (idx) {
+                    return Math.random() * 200;
+                }
+            }
+        ]
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+</script>

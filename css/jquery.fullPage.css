@@ -1,5 +1,5 @@
 /**
- * fullPage 2.5.6
+ * fullPage 2.4.6
  * https://github.com/alvarotrigo/fullPage.js
  * MIT licensed
  *
@@ -68,20 +68,19 @@ html, body {
     height: 0;
     border-style: solid;
     margin-top: -38px;
-    -webkit-transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
 }
 .fp-controlArrow.fp-prev {
+    position: absolute;
     left: 15px;
     width: 0;
     border-width: 38.5px 34px 38.5px 0;
-    border-color: transparent #fff transparent transparent;
+    border-color: transparent #ffcc00 transparent transparent;
 }
 .fp-controlArrow.fp-next {
+    position: absolute;
     right: 15px;
     border-width: 38.5px 0 38.5px 34px;
-    border-color: transparent transparent transparent #fff;
+    border-color: transparent transparent transparent #ffcc00;
 }
 .fp-scrollable {
     overflow: scroll;
@@ -97,7 +96,6 @@ html, body {
     margin-top: -32px;
     top: 50%;
     opacity: 1;
-    -webkit-transform: translate3d(0,0,0);
 }
 #fp-nav.right {
     right: 17px;
@@ -127,7 +125,7 @@ html, body {
     display: block;
     width: 14px;
     height: 13px;
-    margin: 7px;
+    margin: 10px;
     position:relative;
 }
 .fp-slidesNav ul li {
@@ -145,15 +143,15 @@ html, body {
 }
 #fp-nav ul li a.active span,
 .fp-slidesNav ul li a.active span {
-    background: #333;
+    background: #ffcc00;
 }
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
     top: 2px;
     left: 2px;
-    width: 8px;
-    height: 8px;
-    border: 1px solid #000;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #ffcc00;
     background: rgba(0, 0, 0, 0);
     border-radius: 50%;
     position: absolute;
@@ -161,8 +159,8 @@ html, body {
 }
 #fp-nav ul li .fp-tooltip {
     position: absolute;
-    top: -2px;
-    color: #fff;
+    top: -1px;
+    color: #ffcc00;
     font-size: 14px;
     font-family: arial, helvetica, sans-serif;
     white-space: nowrap;
@@ -183,124 +181,4 @@ html, body {
 }
 #fp-nav ul li .fp-tooltip.left {
     left: 20px;
-}
-#fullPage-nav {
-    position: fixed;
-    z-index: 100;
-    top: 50% ;
-    left:0 ;
-    opacity: 1 ;
-}
-#fullPage-nav.right {
-    right: 17px;
-}
-#fullPage-nav.left {
-    left: 17px;
-}
-.fullPage-slidesNav {
-    position: absolute;
-    z-index: 4;
-    left: 50%;
-    opacity: 1;
-}
-.fullPage-slidesNav.bottom {
-    bottom: 17px;
-}
-.fullPage-slidesNav.top {
-    top: 17px;
-}
-#fullPage-nav ul,
-.fullPage-slidesNav ul {
-    margin: 0;
-    padding: 0;
-}
-#fullPage-nav li,
-.fullPage-slidesNav li {
-    display: block;
-    width: 14px;
-    height: 13px;
-    margin: 20px;
-    position:relative;
-}
-.fullPage-slidesNav li {
-    display: inline-block;
-}
-#fullPage-nav li a,
-.fullPage-slidesNav li a {
-    display: block;
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    text-decoration: none;
-}
-#fullPage-nav li .active span,
-.fullPage-slidesNav .active span {
-    background: #fff;
-}
-#fullPage-nav span,
-.fullPage-slidesNav span {
-    top: 2px;
-    left: 2px;
-    width: 8px;
-    height: 8px;
-    border: 1px solid #3FB560;
-    background: rgba(0, 0, 0, 0);
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    position: absolute;
-    z-index: 1;
-}
-.fullPage-tooltip {
-    position: absolute;
-    color: #fff;
-    font-size: 14px;
-    font-family: arial, helvetica, sans-serif;
-    top: -2px;
-}
-.fullPage-tooltip.right {
-    right: 20px;
-}
-.fullPage-tooltip.left {
-    left: 20px;
-}
-
-
-.mask1{
-    width: 100%;
-    height: 100%;
-    z-index: 99999999999;
-    position: relative;
-}
-canvas{
-    position: absolute;
-    top:200px;
-    left: 50px;
-    color:#000;
-}
-canvas:nth-of-type(2){
-    left:350px;
-}
-canvas:nth-of-type(3){
-    left:650px;
-}
-canvas:nth-of-type(4){
-    left:950px;
-}
-.mask1 P{
-    font-size:20px;
-    position: absolute;
-    top: 150px;
-    left:200px;
-}
-.mask1 P:nth-child(2){
-    left:500px;
-}
-.mask1 P:nth-child(3){
-    left:800px;
-}
-.mask1 P:nth-child(4){
-    left:1100px;
 }
